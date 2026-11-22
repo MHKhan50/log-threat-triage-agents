@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.env
+.DS_Store
+*.pyc
+
+.env
+.venv/
+__pycache__/
+.pytest_cache/
+.agents/skills/
+.DS_Store

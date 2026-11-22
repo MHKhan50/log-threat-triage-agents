@@ -1,0 +1,11 @@
+timestamp,asset,event,count,label
+2026-09-10T09:00:00Z,LAB-WEB-01,successful_login,12,normal
+2026-09-10T09:05:00Z,LAB-WEB-01,failed_login,2,normal
+2026-09-10T09:10:00Z,LAB-DNS-01,dns_query,84,normal
+2026-09-10T09:15:00Z,LAB-EMAIL-01,attachment_quarantined,1,normal
+2026-09-10T09:20:00Z,LAB-WEB-01,failed_login,48,anomaly
+2026-09-10T09:25:00Z,LAB-FILE-01,large_file_read,37,suspicious
+2026-09-10T09:30:00Z,LAB-DNS-01,dns_query,91,normal
+2026-09-10T09:35:00Z,LAB-WEB-01,successful_login,9,normal
+2026-09-10T09:40:00Z,LAB-EMAIL-01,attachment_quarantined,2,normal
+2026-09-10T09:45:00Z,LAB-FILE-01,large_file_read,3,normal
