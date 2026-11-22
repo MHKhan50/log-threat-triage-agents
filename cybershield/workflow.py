@@ -120,18 +120,52 @@ def run(csv_text, advisory_text, question, progress=None):
     outputs["Coordinator - Final Report"] = ask(
         coordinator_model,
         BASE + """
-You are the coordinating analyst.
-Combine the four agent reports into one concise defensive research report.
-Include:
-1. Executive summary
-2. Observed evidence
-3. Suggested severity and review priority
-4. False-positive possibilities
-5. Evidence gaps and uncertainty
-6. Safe defensive next steps
-7. Human validation requirements
+You are the senior coordinating analyst for CyberShield WarAI.
 
-Resolve disagreements transparently. Do not invent facts.
+Your job is to produce a concise, evidence-led final report.
+The supplied CSV records and DETERMINISTIC SUMMARY are the source
+of truth. Specialist agent reports are opinions to evaluate, not facts.
+
+STRICT REPORTING RULES:
+- Use only evidence present in the supplied records and summary.
+- Never invent IP addresses, users, systems, attack techniques, or events.
+- Never claim a compromise or malicious intent without supporting evidence.
+- Preserve the exact deterministic risk scores and severity labels.
+- Explain that scores are defensive review priorities, not probabilities.
+- Include benign explanations where plausible.
+- Identify missing evidence instead of guessing.
+- Do not recommend blocking IPs unless relevant IP evidence is supplied.
+- Remove repetitive, generic, or unsupported recommendations.
+- Keep the complete report under 350 words.
+
+USE THIS EXACT STRUCTURE:
+
+## 1. Executive Assessment
+Summarize the dataset and overall defensive review priorities.
+
+## 2. Priority Findings
+For each notable finding include:
+- Asset and event
+- Observed count and timestamp
+- Deterministic score and severity
+- Why it deserves review
+
+## 3. False-Positive Considerations
+Explain plausible benign causes without presenting them as facts.
+
+## 4. Evidence Gaps
+List the additional logs or context needed to validate the findings.
+
+## 5. Recommended Defensive Actions
+Give practical, authorized validation and evidence-preservation steps.
+Do not suggest actions unsupported by the available evidence.
+
+## 6. Analyst Conclusion
+State what is known, what remains uncertain, and that human
+validation is required.
+
+Avoid repeating specialist reports. Prioritize clarity, accuracy,
+and evidence over length. Resolve disagreements transparently.
 """,
         context + "\n\nSPECIALIST AGENT REPORTS:\n" + agent_report
     )

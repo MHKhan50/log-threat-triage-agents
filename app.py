@@ -114,13 +114,14 @@ if st.button("Run Multi-Agent Defensive Analysis",
                 risk_df["severity"]
                 .value_counts()
                 .reindex(["HIGH", "MEDIUM", "LOW"], fill_value=0)
-                .rename_axis("severity")
-                .reset_index(name="records")
+                .rename_axis("Severity")
+                .reset_index(name="Records")
             )
             st.bar_chart(
                 severity_counts,
-                x="severity",
-                y="records",
+                x="Severity",
+                y="Records",
+                x_label="Severity Level",
                 y_label="Number of records"
             )
 
