@@ -1,29 +1,149 @@
-# CyberShield WarAI
-**Local multi-agent defensive cyber threat intelligence and critical-infrastructure resilience research lab.**
+# 🛡️ CyberShield WarAI
+### Local Multi-Agent AI Cyber Threat Intelligence Research Lab
 
-This prototype analyzes researcher-provided public cyber advisories and synthetic defensive security logs. It classifies observations, flags possible anomalies for human review, and drafts a defensive incident report.
+CyberShield WarAI is a locally hosted, multi-agent defensive cyber threat intelligence research lab. It analyzes synthetic or explicitly authorized, sanitized security logs and generates structured findings, risk assessments, and defensive recommendations.
 
-## Safety boundary
-This is strictly defensive. It does not scan networks, exploit systems, write malware, evade detection, steal credentials, or provide offensive instructions. The included logs are synthetic. Do not paste secrets, personal data, production logs, or sensitive infrastructure details.
+## ✨ Key Features
 
-## Requirements
-- macOS, Python 3.10+
-- Ollama running locally
-- Models: `qwen2.5:7b`, `llama3.1:8b`, `mistral:7b`, `qwen2.5:3b`, `llama3.2:3b`
+- Multi-agent AI security analysis using local Ollama models.
+- Threat intelligence and risk assessment.
+- False-positive review.
+- Defensive response recommendations.
+- Deterministic heuristic risk scoring.
+- Interactive Streamlit dashboard.
+- Markdown and PDF report exports.
+- Automated parser and risk-engine tests.
 
-## Run
+## 🧠 Multi-Agent Architecture
+
+| Agent | Responsibility |
+|---|---|
+| Threat Intelligence Agent | Reviews security events and identifies notable patterns |
+| Risk Assessment Agent | Evaluates defensive review priorities |
+| False Positive Review Agent | Considers benign explanations and evidence gaps |
+| Defensive Response Agent | Suggests safe defensive actions |
+| Coordinator Agent | Combines findings into a final report |
+
+## 🛠️ Technology Stack
+
+- Python 3.11
+- Streamlit
+- Ollama
+- Locally hosted language models
+- Pandas
+- ReportLab
+- Pytest
+
+## ⚙️ Requirements
+
+- macOS, Linux, or Windows
+- Python 3.11
+- Ollama installed and running
+- Required Ollama models downloaded
+
+The workflow uses these models by default:
+
+- `mistral:7b`
+- `qwen2.5:7b`
+- `qwen2.5:3b`
+- `llama3.2:3b`
+- `llama3.1:8b`
+
+Download the models with Ollama before running the application.
+
+## 🚀 Installation
+
+Clone the repository:
+
 ```bash
-python3 -m venv .venv
+git clone https://github.com/MHKhan50/cybershield-warai.git
+cd cybershield-warai
+```
+
+Create and activate a virtual environment:
+
+```bash
+python3.11 -m venv .venv
 source .venv/bin/activate
-pip install -r requirements.txt
-cp .env.example .env
-ollama list
+```
+
+Install dependencies:
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+Start Ollama and download the required models:
+
+```bash
+ollama pull mistral:7b
+ollama pull qwen2.5:7b
+ollama pull qwen2.5:3b
+ollama pull llama3.2:3b
+ollama pull llama3.1:8b
+```
+
+Run the application:
+
+```bash
 streamlit run app.py
 ```
-If needed, start Ollama separately with `ollama serve`. Open the local Streamlit URL, usually http://localhost:8501.
 
-## Demo
-Click **Load synthetic lab logs** and **Run defensive analysis**. The dataset is invented and not connected to a real network.
+Open the local Streamlit address displayed in your terminal, usually:
 
-## Research evaluation
-Compare a rules-only baseline, a single-LLM baseline, and the multi-agent pipeline. Measure anomaly precision/recall against synthetic labels, false-positive rate, explanation quality, evidence traceability, reviewer correction rate, latency, and local memory use. This is not a production IDS.
+`http://localhost:8501`
+
+## 🧪 Run Tests
+
+```bash
+python -m pytest -v
+```
+
+## 📊 Risk Scoring
+
+The risk engine assigns deterministic heuristic scores to help prioritize defensive review.
+
+These scores are review-priority indicators, not probabilities of compromise. They are not calibrated predictions and should be interpreted alongside relevant evidence and analyst judgment.
+
+## 🔐 Responsible Use & Safety
+
+CyberShield WarAI is designed for defensive research and security analysis.
+
+- Use synthetic or explicitly authorized, sanitized logs only.
+- Do not submit passwords, access tokens, personal data, or other secrets.
+- Treat log contents and AI-generated findings as untrusted input.
+- Validate all findings and recommendations with a qualified human analyst.
+- No live network scanning, exploitation, malware execution, credential theft, stealth, or persistence functionality is intended.
+
+## 📁 Project Structure
+
+```text
+cybershield-warai/
+├── app.py
+├── cybershield/
+│   ├── workflow.py
+│   ├── ollama.py
+│   ├── log_parser.py
+│   ├── risk.py
+│   └── report.py
+├── data/
+│   └── synthetic_defensive_logs.csv
+├── research/
+│   └── paper_outline.md
+├── tests/
+│   ├── test_parser.py
+│   └── test_risk.py
+├── requirements.txt
+├── .env.example
+└── README.md
+```
+
+## 👨‍💻 Author
+
+**MHKhan50**
+
+GitHub: https://github.com/MHKhan50
+
+---
+
+**CyberShield WarAI — AI-assisted defensive cyber threat intelligence research.**
