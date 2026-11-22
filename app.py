@@ -101,8 +101,11 @@ if st.button("Run Multi-Agent Defensive Analysis",
                 + risk_df["event"].astype(str)
             )
 
+            risk_chart = risk_df[["asset_event", "risk_score"]].copy()
             st.bar_chart(
-                risk_df.set_index("asset_event")["risk_score"],
+                risk_chart,
+                x="asset_event",
+                y="risk_score",
                 y_label="Review priority score (0-100)"
             )
 
@@ -111,8 +114,15 @@ if st.button("Run Multi-Agent Defensive Analysis",
                 risk_df["severity"]
                 .value_counts()
                 .reindex(["HIGH", "MEDIUM", "LOW"], fill_value=0)
+                .rename_axis("severity")
+                .reset_index(name="records")
             )
-            st.bar_chart(severity_counts)
+            st.bar_chart(
+                severity_counts,
+                x="severity",
+                y="records",
+                y_label="Number of records"
+            )
 
             st.subheader("Risk Assessment Details")
             st.dataframe(
