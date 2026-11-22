@@ -3,6 +3,37 @@
 
 CyberShield WarAI is a locally hosted, multi-agent defensive cyber threat intelligence research lab. It analyzes synthetic or explicitly authorized, sanitized security logs and generates structured findings, risk assessments, and defensive recommendations.
 
+## 🏢 Research Organisation
+
+**Masmatix Innovations**
+
+CyberShield WarAI is an AI-assisted defensive cybersecurity
+research project developed under the Masmatix Innovations
+technology and research portfolio.
+
+- Company website: https://masmatixinnovations.co.uk/index.html
+- Research & Insights: https://masmatixinnovations.co.uk/insights/
+
+Visit our company website to learn more about our work and
+explore our published research articles.
+
+## 🧩 System Architecture
+
+```mermaid
+flowchart TD
+    A["Synthetic / Authorized Security Logs"] --> B["Log Parser"]
+    B --> C["Threat Intelligence Agent"]
+    C --> D["Risk Assessment Agent"]
+    D --> E["False Positive Review Agent"]
+    E --> F["Defensive Response Agent"]
+    F --> G["Coordinator Agent"]
+    G --> H["Final Research Report"]
+    B --> I["Deterministic Risk Engine"]
+    I --> G
+    H --> J["Streamlit Dashboard"]
+    H --> K["Markdown / PDF Export"]
+```
+
 ## ✨ Key Features
 
 - Multi-agent AI security analysis using local Ollama models.
@@ -138,11 +169,17 @@ cybershield-warai/
 └── README.md
 ```
 
-## 👨‍💻 Author
+## 👨‍💻 Organisation & Project
 
-**MHKhan50**
+**Masmatix Innovations**
 
-GitHub: https://github.com/MHKhan50
+Website: https://masmatixinnovations.co.uk/
+
+Research & Insights:
+https://masmatixinnovations.co.uk/insights/
+
+GitHub:
+https://github.com/MHKhan50/cybershield-warai
 
 ---
 
