@@ -2,16 +2,16 @@ from pathlib import Path
 import streamlit as st
 import pandas as pd
 
-from cybershield.workflow import run
-from cybershield.report import create_pdf
+from logtriage.workflow import run
+from logtriage.report import create_pdf
 
 st.set_page_config(
-    page_title="CyberShield WarAI",
+    page_title="LogTriage Agents",
     page_icon="🛡️",
     layout="wide"
 )
 
-st.title("🛡️ CyberShield WarAI")
+st.title("🛡️ LogTriage Agents")
 st.caption("Local multi-agent defensive cyber threat intelligence research lab")
 
 st.warning(
@@ -148,7 +148,7 @@ if st.button("Run Multi-Agent Defensive Analysis",
                 st.markdown(body)
 
         report = [
-            "# CyberShield WarAI - Defensive Research Report",
+            "# LogTriage Agents - Defensive Research Report",
             "\n## Deterministic Summary",
             "```json",
             __import__("json").dumps(summary, indent=2),
@@ -161,7 +161,7 @@ if st.button("Run Multi-Agent Defensive Analysis",
         st.download_button(
             "Download Complete Markdown Report",
             "\n\n".join(report),
-            "cybershield_defensive_report.md",
+            "logtriage_defensive_report.md",
             "text/markdown",
             use_container_width=True
         )
@@ -171,7 +171,7 @@ if st.button("Run Multi-Agent Defensive Analysis",
         st.download_button(
             "Download PDF Research Report",
             pdf_bytes,
-            "cybershield_defensive_report.pdf",
+            "logtriage_defensive_report.pdf",
             "application/pdf",
             use_container_width=True
         )
@@ -182,6 +182,6 @@ if st.button("Run Multi-Agent Defensive Analysis",
 
 st.divider()
 st.caption(
-    "CyberShield WarAI | Local AI research | "
+    "LogTriage Agents | Local AI research | "
     "Synthetic and authorized defensive data only"
 )

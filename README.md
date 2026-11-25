@@ -1,23 +1,10 @@
-# 🛡️ CyberShield WarAI
+# LogTriage Agents
 ### Local Multi-Agent AI Cyber Threat Intelligence Research Lab
 
-CyberShield WarAI is a locally hosted, multi-agent defensive cyber threat intelligence research lab. It analyzes synthetic or explicitly authorized, sanitized security logs and generates structured findings, risk assessments, and defensive recommendations.
+LogTriage Agents is a locally hosted, multi-agent defensive cyber threat intelligence research lab. It analyzes synthetic or explicitly authorized, sanitized security logs and generates structured findings, risk assessments, and defensive recommendations.
 
-## 🏢 Research Organisation
 
-**Masmatix Innovations**
-
-CyberShield WarAI is an AI-assisted defensive cybersecurity
-research project developed under the Masmatix Innovations
-technology and research portfolio.
-
-- Company website: https://masmatixinnovations.co.uk/index.html
-- Research & Insights: https://masmatixinnovations.co.uk/insights/
-
-Visit our company website to learn more about our work and
-explore our published research articles.
-
-## 🧩 System Architecture
+## System Architecture
 
 ```mermaid
 flowchart TD
@@ -34,7 +21,7 @@ flowchart TD
     H --> K["Markdown / PDF Export"]
 ```
 
-## ✨ Key Features
+## Key Features
 
 - Multi-agent AI security analysis using local Ollama models.
 - Threat intelligence and risk assessment.
@@ -45,7 +32,7 @@ flowchart TD
 - Markdown and PDF report exports.
 - Automated parser and risk-engine tests.
 
-## 🧠 Multi-Agent Architecture
+## Multi-Agent Architecture
 
 | Agent | Responsibility |
 |---|---|
@@ -55,7 +42,7 @@ flowchart TD
 | Defensive Response Agent | Suggests safe defensive actions |
 | Coordinator Agent | Combines findings into a final report |
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 - Python 3.11
 - Streamlit
@@ -65,7 +52,7 @@ flowchart TD
 - ReportLab
 - Pytest
 
-## ⚙️ Requirements
+## Requirements
 
 - macOS, Linux, or Windows
 - Python 3.11
@@ -82,13 +69,13 @@ The workflow uses these models by default:
 
 Download the models with Ollama before running the application.
 
-## 🚀 Installation
+## Installation
 
 Clone the repository:
 
 ```bash
-git clone https://github.com/MHKhan50/cybershield-warai.git
-cd cybershield-warai
+git clone https://github.com/MHKhan50/log-threat-triage-agents.git
+cd log-threat-triage-agents
 ```
 
 Create and activate a virtual environment:
@@ -124,21 +111,21 @@ Open the local Streamlit address displayed in your terminal, usually:
 
 `http://localhost:8501`
 
-## 🧪 Run Tests
+## Run Tests
 
 ```bash
 python -m pytest -v
 ```
 
-## 📊 Risk Scoring
+## Risk Scoring
 
 The risk engine assigns deterministic heuristic scores to help prioritize defensive review.
 
 These scores are review-priority indicators, not probabilities of compromise. They are not calibrated predictions and should be interpreted alongside relevant evidence and analyst judgment.
 
-## 🔐 Responsible Use & Safety
+## Responsible Use & Safety
 
-CyberShield WarAI is designed for defensive research and security analysis.
+LogTriage Agents is designed for defensive research and security analysis.
 
 - Use synthetic or explicitly authorized, sanitized logs only.
 - Do not submit passwords, access tokens, personal data, or other secrets.
@@ -146,12 +133,12 @@ CyberShield WarAI is designed for defensive research and security analysis.
 - Validate all findings and recommendations with a qualified human analyst.
 - No live network scanning, exploitation, malware execution, credential theft, stealth, or persistence functionality is intended.
 
-## 📁 Project Structure
+## Project Structure
 
 ```text
-cybershield-warai/
+log-threat-triage-agents/
 ├── app.py
-├── cybershield/
+├── logtriage/
 │   ├── workflow.py
 │   ├── ollama.py
 │   ├── log_parser.py
@@ -169,18 +156,24 @@ cybershield-warai/
 └── README.md
 ```
 
-## 👨‍💻 Organisation & Project
 
-**Masmatix Innovations**
+## How to cite
 
-Website: https://masmatixinnovations.co.uk/
+```bibtex
+@software{hussain2026logtriage,
+  author = {Hussain, Muzammal},
+  title  = {{LogTriage Agents: local multi-agent triage of authorised security logs}},
+  year   = {2026},
+  url    = {https://github.com/MHKhan50/log-threat-triage-agents}
+}
+```
 
-Research & Insights:
-https://masmatixinnovations.co.uk/insights/
+## Author
 
-GitHub:
-https://github.com/MHKhan50/cybershield-warai
+Muzammal Hussain, independent researcher, Glasgow, United Kingdom.
+ORCID: [0009-0001-2570-5686](https://orcid.org/0009-0001-2570-5686)
 
----
+## Licence
 
-**CyberShield WarAI — AI-assisted defensive cyber threat intelligence research.**
+MIT. See `LICENSE`.
+

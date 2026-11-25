@@ -1,4 +1,4 @@
-from cybershield.risk import assess_rows
+from logtriage.risk import assess_rows
 
 
 def test_anomaly_high_count_gets_high_priority():

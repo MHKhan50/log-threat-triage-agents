@@ -1,7 +1,7 @@
-# Paper outline: CyberShield WarAI
+# Paper outline: LogTriage Agents
 
 ## Proposed title
-CyberShield WarAI: A Local Multi-Agent LLM Framework for Defensive Cyber Threat Intelligence and Critical-Infrastructure Resilience
+LogTriage Agents: A Local Multi-Agent LLM Framework for Defensive Cyber Threat Intelligence and Critical-Infrastructure Resilience
 
 ## Research question
 Can multi-agent critique improve the quality and explainability of defensive triage on synthetic cyber telemetry compared with rules-only and single-LLM baselines?

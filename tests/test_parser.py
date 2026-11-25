@@ -1,5 +1,5 @@
 from pathlib import Path
-from cybershield.log_parser import parse_csv, rules_summary
+from logtriage.log_parser import parse_csv, rules_summary
 
 def test_synthetic_dataset_parses():
     raw = (Path(__file__).parents[1] / "data" / "synthetic_defensive_logs.csv").read_text()

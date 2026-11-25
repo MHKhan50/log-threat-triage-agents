@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "LogTriage Agents: local multi-agent triage of authorised security logs"
+version: 0.1.0
+date-released: 2026-11-25
+type: software
+license: MIT
+repository-code: "https://github.com/MHKhan50/log-threat-triage-agents"
+authors:
+  - family-names: Hussain
+    given-names: Muzammal
+    affiliation: "Independent researcher, Glasgow, United Kingdom"
+    orcid: "https://orcid.org/0009-0001-2570-5686"
+keywords:
+  - cyber defence
+  - log analysis
+  - multi-agent systems
+  - LLM agents
+  - Ollama

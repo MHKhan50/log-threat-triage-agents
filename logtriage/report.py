@@ -21,7 +21,7 @@ def create_pdf(summary, results):
         buffer, pagesize=A4,
         rightMargin=16 * mm, leftMargin=16 * mm,
         topMargin=18 * mm, bottomMargin=18 * mm,
-        title="CyberShield WarAI Defensive Research Report"
+        title="LogTriage Agents Defensive Research Report"
     )
 
     styles = getSampleStyleSheet()
@@ -42,7 +42,7 @@ def create_pdf(summary, results):
 
     story = [
         Spacer(1, 28 * mm),
-        Paragraph("CYBERSHIELD WARAI", styles["CSCover"]),
+        Paragraph("LOGTRIAGE AGENTS", styles["CSCover"]),
         Paragraph("Defensive Cybersecurity Research Report",
                   styles["Heading2"]),
         Spacer(1, 8 * mm),
@@ -150,7 +150,7 @@ def create_pdf(summary, results):
         canvas.saveState()
         canvas.setFont("Helvetica", 8)
         canvas.setFillColor(colors.HexColor("#64748B"))
-        canvas.drawString(16 * mm, 10 * mm, "CyberShield WarAI | Human validation required")
+        canvas.drawString(16 * mm, 10 * mm, "LogTriage Agents | Human validation required")
         canvas.drawRightString(A4[0] - 16 * mm, 10 * mm,
                                f"Page {document.page}")
         canvas.restoreState()
